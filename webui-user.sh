@@ -4,14 +4,15 @@
 #########################################################
 
 # Install directory without trailing slash
-install_dir="/home/$(whoami)/workspace"
+install_dir="/media/$(whoami)/Data"
 
 # Name of the subdirectory
 clone_dir="stable-diffusion-webui"
 
 # Commandline arguments for webui.py, for example: export COMMANDLINE_ARGS="--medvram --opt-split-attention"
-#export COMMANDLINE_ARGS=""
-export COMMANDLINE_ARGS="--xformers --autolaunch --skip-torch-cuda-test"
+# export COMMANDLINE_ARGS=""
+# other args:  --skip-install
+export COMMANDLINE_ARGS="--xformers --autolaunch --skip-torch-cuda-test --skip-install"
 
 # python3 executable
 #python_cmd="python3"
@@ -20,7 +21,7 @@ export COMMANDLINE_ARGS="--xformers --autolaunch --skip-torch-cuda-test"
 #export GIT="git"
 
 # python3 venv without trailing slash (defaults to ${install_dir}/${clone_dir}/venv)
-venv_dir="/home/bo/workspace/venv_webui"
+venv_dir="${install_dir}/${clone_dir}/venv"
 
 # script to launch to start the app
 #export LAUNCH_SCRIPT="launch.py"
